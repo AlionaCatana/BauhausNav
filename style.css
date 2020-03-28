@@ -1,0 +1,87 @@
+
+body{
+    background-color: blueviolet;
+    font-family: 'Poppins', sans-serif;;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+header{
+    display: table;
+    width: 90%;
+    margin: auto;
+    background-color: #272727;
+}
+header ul{ 
+    display: table-row;
+}
+header ul li{
+    display: table-cell;
+    padding: 1.7em;
+}
+header ul li:nth-child(1){
+    width: 2em;
+    padding-right: 0.65em;
+    padding-bottom: 0;
+    vertical-align: middle;
+}
+header ul li:nth-child(1)::before{
+    content: "-";
+    color: #272727;
+    font-size: 4em;
+    font-weight: 700;
+    float: right;
+    transform: translateX(-0.4em) translateY(-0.07em) rotateZ(140deg);
+}
+header ul li:nth-child(2){
+    padding: 0;
+    margin-right: 3em;
+    vertical-align: middle;
+    width: 10%;
+}
+header ul li:nth-child(3){
+    width: 50%;
+    text-align: right;
+    vertical-align: middle;
+    color: #555;
+    font-weight: 600;
+    font-size: 1em;
+}
+#icons{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.3em;
+}
+#icons a{
+    vertical-align: middle;
+    margin-top: 1em;
+    padding: 0.75em;
+}
+#icons a:first-child{
+    margin-left: 1.5em;
+    border-left: 1.2px solid #444 ;
+    padding-left: 3em;
+}
+header ul #bars{
+    width: 3%;
+    font-size: 1.3em;
+    padding-right: 1em;
+    color: #fff;
+}
+header ul #brand{
+    width: 1.65em;
+    height: 1.65em;
+    border: 0.40em solid #fff;
+}
+.logo-name{
+    font-size: 1.7em;
+    font-weight: bold;
+    text-align: left;
+}
+.logo-text{
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #555;
+    text-align: left;
+}
