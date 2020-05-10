@@ -1,74 +1,69 @@
 
 body{
     background-color: blueviolet;
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
 }
 a{
     text-decoration: none;
     color: #fff;
 }
 header{
-    display: table;
-    width: 90%;
-    margin: auto;
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 87vw;
     background-color: #272727;
 }
-header ul{ 
-    display: table-row;
-}
 header ul li{
-    display: table-cell;
     padding: 1.7em;
 }
-header ul li:nth-child(1){
-    width: 2em;
-    padding-right: 0.65em;
-    padding-bottom: 0;
-    vertical-align: middle;
+
+header ul.brend{
+    display: flex;
 }
-header ul li:nth-child(1)::before{
+header ul.brend li:first-child::before{
     content: "-";
     color: #272727;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 700;
-    float: right;
-    transform: translateX(-0.4em) translateY(-0.07em) rotateZ(140deg);
+    position: absolute;
+    transform: translateX(-0.2em) translateY(-0.07em) rotateZ(140deg);
 }
-header ul li:nth-child(2){
-    padding: 0;
-    margin-right: 3em;
-    vertical-align: middle;
-    width: 10%;
+header ul.brend li:last-child{
+    margin-left: -3em;
 }
-header ul li:nth-child(3){
-    width: 50%;
-    text-align: right;
-    vertical-align: middle;
+
+header ul.namber{
+    flex-grow: 4;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2em;
+}
+header ul.namber li{
     color: #555;
     font-weight: 600;
     font-size: 1em;
 }
-#icons{
-    display: table-cell;
-    vertical-align: middle;
+
+header ul.icons{
+    font-size: 1em;
+    display: flex;
+    flex-grow: 4;
+    flex-basis: 1em;
+    border-left: 1px solid #555;
+    padding-left: 2em;
+}
+.icons a{
+    display: block;
+}
+header ul.bars{
     font-size: 1.3em;
-}
-#icons a{
-    vertical-align: middle;
-    margin-top: 1em;
-    padding: 0.75em;
-}
-#icons a:first-child{
-    margin-left: 1.5em;
-    border-left: 1.2px solid #444 ;
-    padding-left: 3em;
-}
-header ul #bars{
-    width: 3%;
-    font-size: 1.3em;
-    padding-right: 1em;
     color: #fff;
 }
+
 header ul #brand{
     width: 1.65em;
     height: 1.65em;
@@ -85,3 +80,43 @@ header ul #brand{
     color: #555;
     text-align: left;
 }
+
+
+/* _________________ADOPTIVE________________ */
+@media (max-width: 1200px){
+    header ul.icons{
+        display: none;
+    }
+    header ul.namber{
+        margin-right: 0em;
+    }
+}
+@media (max-width: 960px){
+    body, p{
+        font-size: 0.8rem;
+        line-height: 1.2em;
+    }
+    header ul.brend li:first-child::before{
+        transform: translateX(-0.2em) translateY(0.25em) rotateZ(140deg);
+    }
+}
+@media (max-width: 600px){
+    header ul.namber {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
